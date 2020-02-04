@@ -4,9 +4,18 @@
 
 A lightweight Map based LRU implementation.
 
+```js
+import LRU from 'basic-lru';
+const LRU = require('basic-lru');
+// https://unpkg.com/basic-lru to have LRU globally
+```
+
+### About
+
 This module is a drop-in replacement for any [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) instance, and it's mostly 100% compatible with [lru](https://github.com/chriso/lru), [lru-cache](https://github.com/isaacs/node-lru-cache), [quick-lru](https://github.com/sindresorhus/quick-lru), and [lru-map](https://github.com/bchociej/lru-map) modules.
 
 Differently from other modules, this one has the least amount of LOC, zero dependencies, and it's based on ES2015 class capability to extend the native Map.
+
 
 ### The Map Extend Differences
 
