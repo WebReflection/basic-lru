@@ -8,6 +8,19 @@ A lightweight Map based LRU implementation.
 import LRU from 'basic-lru';
 const LRU = require('basic-lru');
 // https://unpkg.com/basic-lru to have LRU globally
+
+// new LRU(maxSize)
+const lru = new LRU(100);
+
+// new LRU({max}) or new LRU({maxSize})
+const lru = new LRU({max: 1000});
+
+// new LRU({maxAge}) in milliseconds
+const lru = new LRU({maxAge: 1000});
+
+// variants
+const lru = new LRU({max: 100, maxAge: 1000});
+const lru = new LRU({maxSize: 100, maxAge: 1000});
 ```
 
 ### About
