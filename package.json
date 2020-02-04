@@ -1,6 +1,6 @@
 {
   "name": "basic-lru",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A lightweight Map based LRU implementation",
   "main": "cjs/index.js",
   "scripts": {
@@ -11,7 +11,11 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "test": "nyc node test/index.js"
   },
-  "keywords": ["lru", "lightweight", "map"],
+  "keywords": [
+    "lru",
+    "lightweight",
+    "map"
+  ],
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
