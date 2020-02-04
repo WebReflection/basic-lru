@@ -96,4 +96,4 @@ var LRU = (function (exports) {
 
   return exports;
 
-}({}));
+}({}).default);

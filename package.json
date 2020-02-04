@@ -4,8 +4,9 @@
   "description": "A lightweight Map based LRU implementation",
   "main": "cjs/index.js",
   "scripts": {
-    "build": "npm run cjs && npm run rollup:new && npm run rollup:index && npm run test",
+    "build": "npm run cjs && npm run rollup:new && npm run rollup:index && npm run fix && npm run test",
     "cjs": "ascjs --no-default esm cjs",
+    "fix": "sed -i 's/({})/({}).default/' index.js && sed -i 's/({})/({}).default/' new.js",
     "rollup:new": "rollup --config rollup/new.config.js",
     "rollup:index": "rollup --config rollup/index.config.js",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",

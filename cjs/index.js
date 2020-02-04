@@ -88,4 +88,4 @@ module.exports = class LRU extends Map {
         this.delete(key);
     });
   }
-}
+};
