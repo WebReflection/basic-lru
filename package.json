@@ -1,0 +1,27 @@
+{
+  "name": "basic-lru",
+  "version": "0.0.0",
+  "description": "A lightweight Map based LRU implementation",
+  "main": "cjs/index.js",
+  "scripts": {
+    "build": "npm run cjs && npm run rollup:new && npm run rollup:index && npm run test",
+    "cjs": "ascjs --no-default esm cjs",
+    "rollup:new": "rollup --config rollup/new.config.js",
+    "rollup:index": "rollup --config rollup/index.config.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc node test/index.js"
+  },
+  "keywords": ["lru", "lightweight", "map"],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^3.1.2",
+    "coveralls": "^3.0.9",
+    "nyc": "^15.0.0",
+    "rollup": "^1.31.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.2.0"
+  },
+  "module": "esm/index.js",
+  "unpkg": "new.js"
+}
