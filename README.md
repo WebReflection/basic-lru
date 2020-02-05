@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/WebReflection/basic-lru.svg?branch=master)](https://travis-ci.com/WebReflection/basic-lru) [![Coverage Status](https://coveralls.io/repos/github/WebReflection/basic-lru/badge.svg?branch=master)](https://coveralls.io/github/WebReflection/basic-lru?branch=master)
 
-A lightweight Map based LRU implementation.
+A lightweight, as in 1.2K, Map based LRU implementation.
 
 ```js
 import LRU from 'basic-lru';
