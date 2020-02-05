@@ -64,17 +64,17 @@ module.exports = class LRU extends Map {
     yield * this[iterator]();
   }
   * values() {
-    for (const [_, {value}] of super[iterator].call(this))
+    for (const [_, {value}] of super[iterator]())
       yield value;
   }
   * [iterator]() {
-    for (const [key, {value}] of super[iterator].call(this))
+    for (const [key, {value}] of super[iterator]())
       yield [key, value];
   }
 
   // private methods (to be moved as #methods)
   _dropCount() {
-    const entries = [...super[iterator].call(this)];
+    const entries = [...super[iterator]()];
     const [[toBeRemoved]] = entries.sort(([_1, entry1], [_2, entry2]) => {
       const prop = entry1.time === entry2.time ? 'count' : 'time';
       return entry1[prop] - entry2[prop];
