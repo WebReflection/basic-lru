@@ -4,6 +4,7 @@
   "description": "A lightweight Map based LRU implementation",
   "main": "cjs/index.js",
   "scripts": {
+    "benchmark": "node test/benchmark-lru.js && node test/benchmark-lru-cache.js && node test/benchmark-lru-map.js && node test/benchmark-quick-lru.js && node test/benchmark-basic-lru.js",
     "build": "npm run cjs && npm run rollup:new && npm run rollup:index && npm run fix && npm run test",
     "cjs": "ascjs --no-default esm cjs",
     "fix": "sed -i 's/({})/({}).default/' index.js && sed -i 's/({})/({}).default/' new.js",
@@ -21,8 +22,14 @@
   "license": "ISC",
   "devDependencies": {
     "ascjs": "^3.1.2",
+    "benchmark": "^2.1.4",
+    "bluebird": "^3.7.2",
     "coveralls": "^3.0.9",
+    "lru": "^3.1.0",
+    "lru-cache": "^5.1.1",
+    "lru-map": "^1.6.1",
     "nyc": "^15.0.0",
+    "quick-lru": "^4.0.1",
     "rollup": "^1.31.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.2.0"
