@@ -1,7 +1,7 @@
 {
   "name": "basic-lru",
   "version": "1.0.0",
-  "description": "A lightweight Map based LRU implementation",
+  "description": "A fast and lightweight Map based LRU implementation.",
   "main": "cjs/index.js",
   "scripts": {
     "benchmark": "node test/benchmark-lru.js && node test/benchmark-lru-cache.js && node test/benchmark-lru-map.js && node test/benchmark-quick-lru.js && node test/benchmark-basic-lru.js",
@@ -14,6 +14,7 @@
     "test": "nyc node test/index.js"
   },
   "keywords": [
+    "fast",
     "lru",
     "lightweight",
     "map"

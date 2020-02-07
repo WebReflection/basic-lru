@@ -1,8 +1,10 @@
 # basic-lru
 
+<sup>**Social Media Photo by [Mr Cup / Fabien Barral](https://unsplash.com/@iammrcup) on [Unsplash](https://unsplash.com/)**</sup>
+
 [![Build Status](https://travis-ci.com/WebReflection/basic-lru.svg?branch=master)](https://travis-ci.com/WebReflection/basic-lru) [![Coverage Status](https://coveralls.io/repos/github/WebReflection/basic-lru/badge.svg?branch=master)](https://coveralls.io/github/WebReflection/basic-lru?branch=master)
 
-A lightweight, as in 1.2K, Map based LRU implementation.
+A fast and lightweight, as in [684 bytes](https://unpkg.com/basic-lru), Map based LRU implementation.
 
 ```js
 import LRU from 'basic-lru';
@@ -27,7 +29,7 @@ const lru = new LRU({maxSize: 100, maxAge: 1000});
 
 This module is a drop-in replacement for any [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) instance, and it's mostly 100% compatible with [lru](https://github.com/chriso/lru), [lru-cache](https://github.com/isaacs/node-lru-cache), [quick-lru](https://github.com/sindresorhus/quick-lru), and [lru-map](https://github.com/bchociej/lru-map) modules.
 
-Differently from other modules, this one has the least amount of LOC, zero dependencies, and it's based on ES2015 class capability to extend the native Map.
+Differently from other modules, this one has the least amount of LOC, zero dependencies, and it's based on _ES2015_ class capability to extend the native `Map`.
 
 
 ### The Map Extend Differences
