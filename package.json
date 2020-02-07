@@ -1,6 +1,6 @@
 {
   "name": "basic-lru",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A lightweight Map based LRU implementation",
   "main": "cjs/index.js",
   "scripts": {
