@@ -4,7 +4,7 @@
   "description": "A fast and lightweight Map based LRU implementation.",
   "main": "cjs/index.js",
   "scripts": {
-    "benchmark": "node test/benchmark-lru.js && node test/benchmark-lru-cache.js && node test/benchmark-lru-map.js && node test/benchmark-quick-lru.js && node test/benchmark-basic-lru.js",
+    "benchmark": "node test/benchmark-basic-lru.js && node test/benchmark-lru.js && node test/benchmark-lru-map.js && node test/benchmark-lru-cache.js && node test/benchmark-quick-lru.js",
     "build": "npm run cjs && npm run rollup:new && npm run rollup:index && npm run fix && npm run test",
     "cjs": "ascjs --no-default esm cjs",
     "fix": "sed -i 's/({})/({}).default/' index.js && sed -i 's/({})/({}).default/' new.js",

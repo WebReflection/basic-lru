@@ -21,7 +21,7 @@ var lru1 = new LRU({
 })
 var lru1Counter = 0
 
-add('set', function() {
+add(' set', function() {
   lru1.set('key' + (lru1Counter++), 'value')
 })
 
@@ -29,18 +29,17 @@ add('set', function() {
 var lru2 = new LRU({
   max: 1000
 })
-var lru2CounterGet = 0
-var lru2CounterPeek = 0
+var lru2Counter = 0
 
 for (var i = 0; i < 1000; i++)
   lru2.set('key' + i, 'value')
 
-add('get', function() {
-  lru2.get('key' + (lru2CounterGet++) % 1000)
+add(' get', function() {
+  lru2.get('key' + (lru2Counter++) % 1000)
 })
 
-add('peek', function() {
-  lru2.peek('key' + (lru2CounterPeek++) % 1000)
+add(' peek', function() {
+  lru2.peek('key' + (lru2Counter++) % 1000)
 })
 
 // SET with maxAge
@@ -50,7 +49,7 @@ var lru3 = new LRU({
 })
 var lru3Counter = 0
 
-add('set with `maxAge`', function() {
+add(' set with `maxAge`', function() {
   lru3.set('key' + (lru3Counter++), 'value', 100000)
 })
 
@@ -60,4 +59,4 @@ suite
     if (event.target.error)
       console.error(event.target.error)
   })
-  .run()
+  .run();
